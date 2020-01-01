@@ -19,6 +19,16 @@
 使用方法 | Usage
 ---------
 
+1. 转到 https://b3k.hydev.org/
+2. 如果要把数字转换到 b3k, 在左边输入数字w
+3. 如果要把 b3k 转回数字, 在右边输入 b3k.
+
+### In English:
+
+1. Goto https://b3k.hydev.org/
+2. If you want to convert decimal to b3k, enter number on the left.
+3. If you want to convert b3k back to decimal, enter b3k on the right.
+
 <a name="info"></a>
 概念 | Info
 ---------
