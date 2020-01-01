@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <div id="title">
-            <h1>数字缩短工具</h1>
-            <h3>Chinese Number Compressor | Base 3036</h3>
+            <h1>数字缩短工具 | 三千进制</h1>
+            <h3>Chinese Number Compressor | Base 3000</h3>
         </div>
 
         <el-input type="textarea" :rows="5"
