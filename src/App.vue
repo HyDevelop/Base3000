@@ -85,7 +85,7 @@
                 result = scheme[digit] + result;
 
                 // Update value
-                value = (value - digit) / base;
+                value = Math.round((value - digit) / base);
             }
 
             return result || scheme[0];
