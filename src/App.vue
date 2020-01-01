@@ -48,6 +48,9 @@
                 return;
             }
 
+            // Check letters existence
+            this.output = this.output.split('').filter(c => freqList.includes(c)).join('');
+
             this.input = '' + this.decode(this.output);
         }
 
@@ -93,7 +96,7 @@
                 const digit = scheme.indexOf(char);
 
                 // Not found scenario
-                if (digit == -1) throw new Error(`未知字符 | Unknown Char: ${char}`);
+                if (digit == -1) throw new Error(`未知字符 | Unknown Char: '${char}'`);
 
                 // Add value to sum
                 return sum + digit * Math.pow(base, index);
