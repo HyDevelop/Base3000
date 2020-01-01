@@ -30,8 +30,18 @@
     @Component
     export default class App extends Vue
     {
-        input: string;
+        input: string = '';
+        output: string = '';
 
+        onInputChange()
+        {
+            this.input = this.input.replace(/[^\d]/g, '');
+        }
+
+        onOutputChange()
+        {
+
+        }
     }
 </script>
 
