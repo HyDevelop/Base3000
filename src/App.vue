@@ -20,6 +20,7 @@
     @Component
     export default class App extends Vue
     {
+        input: string;
 
     }
 </script>
@@ -29,6 +30,12 @@
     {
         margin-top: 60px;
         margin-bottom: 60px;
+    }
+
+    #input
+    {
+        margin: auto;
+        max-width: 1200px;
     }
 
     #app
