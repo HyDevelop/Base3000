@@ -4,6 +4,11 @@
             <h1>数字缩短工具</h1>
             <h3>Chinese Number Compressor | Base 3036</h3>
         </div>
+
+        <el-input type="textarea" :rows="5"
+                placeholder="输入 | Input"
+                v-model="input" id="input">
+        </el-input>
     </div>
 </template>
 
