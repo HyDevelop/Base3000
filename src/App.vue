@@ -25,7 +25,7 @@
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
 
-    import freqList from '@/freq-list-zh.json'
+    import freqList from '@/base3000.json'
 
     @Component
     export default class App extends Vue
