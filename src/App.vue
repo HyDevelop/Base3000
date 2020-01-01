@@ -41,7 +41,10 @@
 
         onOutputChange()
         {
+            // Typing
+            if (this.isTyping(this.output)) return;
 
+            
         }
 
         /**
@@ -91,6 +94,19 @@
                 // Add value to sum
                 return sum + digit * Math.pow(base, index);
             }, 0);
+        }
+
+        /**
+         * Is typing with chinese IME or not
+         *
+         * @param str
+         */
+        isTyping(str: string)
+        {
+            const lower = str.toLowerCase();
+            const english = "abcdefghijklmnopqrstuvwxyz";
+
+            return lower.split('').filter(c => english.includes(c)).length > 0;
         }
     }
 </script>
