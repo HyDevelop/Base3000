@@ -33,6 +33,13 @@
 概念 | Info
 ---------
 
+这个程序使用了最常用的 3000 个中文字符来把一串十进制很长的一串数字缩短到几个中文字符w<br>
+(字符常用性参考: http://lingua.mtsu.edu/chinese-computing/statistics/char/list.php?Which=MO)<br>
+在列表里面做了一些修改, 比如说把前 11 个字改成 "零" 到 "十" 什么的w<br>
+完整列表 JSON 在[这里](src/base3000.json).
+
+This program utilizes a list of 3000 most commonly used Chinese characters as digit bases to shorten very long numbers in base 10 into simply several Chinese characters in Base 3000. The original list can be found here: http://lingua.mtsu.edu/chinese-computing/statistics/char/list.php?Which=MO. There were some modifications to this list, mainly just to make the characters look nicer, like moving the characters that represent 0 (零) to 10 (十) to the index of 0 to 10 even though 0 (零) is not actually the most frequently used character. The complete json can be found [here](src/base3000.json).
+
 <a name="license"></a>
-开源条款 | License
+开源条款 | License: [MIT](LICENSE)
 ---------
