@@ -49,6 +49,7 @@
     .input
     {
         width: 40%;
+        margin: 10px;
     }
 
     #app
