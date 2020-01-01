@@ -8,7 +8,7 @@
         <el-row :gutter="20" id="content">
             <el-col :span="12">
                 <el-input type="textarea" :rows="20" resize="none"
-                          placeholder="十位数字 | Input Dec"
+                          placeholder="十位数字 | Base 10"
                           v-model="input" class="input" @input="onInputChange">
                 </el-input>
             </el-col>
@@ -19,6 +19,17 @@
                 </el-input>
             </el-col>
         </el-row>
+
+        <div id="footer">
+            <p>
+                这个程序使用了最常用的 3000 个中文字符来把一串十进制很长的一串数字缩短到几个中文字符w<br>
+                在上面输入来开始使用吧w<br>
+            </p>
+            <p>
+                This program utilizes a list of 3000 most commonly used Chinese characters as digit bases to
+                shorten very long numbers in base 10 into simply several Chinese characters in Base 3000.
+            </p>
+        </div>
     </div>
 </template>
 
@@ -119,7 +130,7 @@
 </script>
 
 <style lang="scss">
-    #title
+    #title,#footer
     {
         margin-top: 60px;
         margin-bottom: 60px;
@@ -127,15 +138,12 @@
 
     #content
     {
-        margin: auto;
-        max-width: 1200px;
         position: relative;
     }
 
     .input
     {
         width: 100%;
-        margin: 10px;
     }
 
     #app
@@ -145,5 +153,8 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
+
+        margin: auto !important;
+        max-width: 1000px;
     }
 </style>
