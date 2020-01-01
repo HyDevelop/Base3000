@@ -36,6 +36,7 @@
         onInputChange()
         {
             this.input = this.input.replace(/[^\d]/g, '');
+            this.output = this.input ? this.encode(+this.input) : '';
         }
 
         onOutputChange()
