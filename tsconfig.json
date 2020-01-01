@@ -27,6 +27,7 @@
         ],
 
         // Custom
+        "resolveJsonModule": true,
         "strictPropertyInitialization": false
     },
     "include": [
