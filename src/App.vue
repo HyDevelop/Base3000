@@ -42,9 +42,13 @@
         onOutputChange()
         {
             // Typing
-            if (this.isTyping(this.output)) return;
+            if (this.isTyping(this.output))
+            {
+                this.input = 'Typing... (Chinese chars only on the right side)';
+                return;
+            }
 
-            
+            this.input = '' + this.decode(this.output);
         }
 
         /**
