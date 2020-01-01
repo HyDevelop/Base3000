@@ -62,7 +62,7 @@
             // Check letters existence
             this.output = this.output.split('').filter(c => freqList.includes(c)).join('');
 
-            this.input = '' + this.decode(this.output);
+            this.input = this.decode(this.output).toLocaleString('fullwide', {useGrouping:false});
         }
 
         /**
