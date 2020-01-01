@@ -5,10 +5,17 @@
             <h3>Chinese Number Compressor | Base 3000</h3>
         </div>
 
-        <el-input type="textarea" :rows="5"
-                placeholder="输入 | Input"
-                v-model="input" id="input">
-        </el-input>
+        <div id="content">
+            <el-input type="textarea" :rows="20" resize="none"
+                      placeholder="十位数字 | Input Dec"
+                      v-model="input" class="input" @input="onInputChange">
+            </el-input>
+
+            <el-input type="textarea" :rows="20" resize="none"
+                      placeholder="三千进制 | Base 3000"
+                      v-model="output" class="input" @input="onOutputChange">
+            </el-input>
+        </div>
     </div>
 </template>
 
