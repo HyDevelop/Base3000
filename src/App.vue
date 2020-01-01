@@ -39,10 +39,16 @@
         margin-bottom: 60px;
     }
 
-    #input
+    #content
     {
         margin: auto;
         max-width: 1200px;
+        position: relative;
+    }
+
+    .input
+    {
+        width: 40%;
     }
 
     #app
