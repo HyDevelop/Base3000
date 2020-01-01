@@ -1,7 +1,9 @@
 <template>
     <div id="app">
-        <h1>数字缩短工具</h1>
-        <h3>Chinese Number Compressor | Base 3036</h3>
+        <div id="title">
+            <h1>数字缩短工具</h1>
+            <h3>Chinese Number Compressor | Base 3036</h3>
+        </div>
     </div>
 </template>
 
@@ -18,12 +20,18 @@
 </script>
 
 <style lang="scss">
-    #app {
+    #title
+    {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    #app
+    {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
     }
 </style>
