@@ -42,6 +42,33 @@
         {
 
         }
+
+        /**
+         * Encode base 3000
+         *
+         * @param value
+         * @param scheme Letter scheme used
+         */
+        encode(value: number, scheme = freqList)
+        {
+            const base = scheme.length;
+            let result = '';
+
+            while (value > 0)
+            {
+                // Calculate the dec digit
+                const digit = value % base;
+
+                // Add digit to result
+                result = scheme[digit] + result;
+
+                // Update value
+                value = (value - digit) / base;
+            }
+
+            return result || scheme[0];
+        }
+
     }
 </script>
 
