@@ -60,7 +60,7 @@
                 // Calculate the dec digit
                 const digit = value % base;
 
-                // Add digit to result
+                // Find char from digit and add to result
                 result = scheme[digit] + result;
 
                 // Update value
@@ -70,6 +70,28 @@
             return result || scheme[0];
         }
 
+        /**
+         * Decode Base 3000
+         *
+         * @param value
+         * @param scheme Letter scheme used
+         */
+        decode(value: string, scheme = freqList)
+        {
+            const base = scheme.length;
+
+            return value.split('').reverse().reduce((sum, char, index) =>
+            {
+                // Find digit from char
+                const digit = scheme.indexOf(char);
+
+                // Not found scenario
+                if (digit == -1) throw new Error(`未知字符 | Unknown Char: ${char}`);
+
+                // Add value to sum
+                return sum + digit * Math.pow(base, index);
+            }, 0);
+        }
     }
 </script>
 
