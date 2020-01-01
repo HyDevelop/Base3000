@@ -122,7 +122,7 @@
         isTyping(str: string)
         {
             const lower = str.toLowerCase();
-            const english = "abcdefghijklmnopqrstuvwxyz";
+            const english = 'abcdefghijklmnopqrstuvwxyz';
 
             return lower.split('').filter(c => english.includes(c)).length > 0;
         }
