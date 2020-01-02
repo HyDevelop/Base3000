@@ -35,8 +35,10 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
+    const bigInt = require('big-integer');
 
     import freqList from '@/base3000.json'
+    import {BigInteger} from 'big-integer';
 
     @Component
     export default class App extends Vue
@@ -47,7 +49,7 @@
         onInputChange()
         {
             this.input = this.input.replace(/[^\d]/g, '');
-            this.output = this.input ? this.encode(+this.input) : '';
+            this.output = this.input ? this.encode(bigInt(this.input)) : '';
         }
 
         onOutputChange()
@@ -71,21 +73,21 @@
          * @param value
          * @param scheme Letter scheme used
          */
-        encode(value: number, scheme = freqList)
+        encode(value: BigInteger, scheme = freqList)
         {
             const base = scheme.length;
             let result = '';
 
-            while (value > 0)
+            while (!value.eq(0))
             {
                 // Calculate the dec digit
-                const digit = value % base;
+                const digit = value.mod(base).toJSNumber();
 
                 // Find char from digit and add to result
                 result = scheme[digit] + result;
 
                 // Update value
-                value = Math.round((value - digit) / base);
+                value = value.subtract(digit).divide(base);
             }
 
             return result || scheme[0];
