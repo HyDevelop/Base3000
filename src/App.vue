@@ -64,7 +64,7 @@
             // Check letters existence
             this.output = this.output.split('').filter(c => freqList.includes(c)).join('');
 
-            this.input = this.decode(this.output).toLocaleString('fullwide', {useGrouping:false});
+            this.input = this.decode(this.output).toString();
         }
 
         /**
@@ -112,8 +112,8 @@
                 if (digit == -1) throw new Error(`未知字符 | Unknown Char: '${char}'`);
 
                 // Add value to sum
-                return sum + digit * Math.pow(base, index);
-            }, 0);
+                return sum.add(bigInt(digit).multiply(bigInt(base).pow(index)));
+            }, bigInt.zero);
         }
 
         /**
