@@ -7,12 +7,14 @@
 
         <el-row :gutter="20" id="content">
             <el-col :span="12">
+                <span class="label">↓ 十进制数 | Base 10 ↓</span>
                 <el-input type="textarea" :rows="20" resize="none"
                           placeholder="十位数字 | Base 10"
                           v-model="input" class="input" @input="onInputChange">
                 </el-input>
             </el-col>
             <el-col :span="12">
+                <span class="label">↓ 三千进制 | Base 3000 ↓</span>
                 <el-input type="textarea" :rows="20" resize="none"
                           placeholder="三千进制 | Base 3000"
                           v-model="output" class="input" @input="onOutputChange">
@@ -43,8 +45,8 @@
     @Component
     export default class App extends Vue
     {
-        input: string = '';
-        output: string = '';
+        input: string = '90000270170';
+        output: string = '三千进制';
 
         onInputChange()
         {
@@ -140,7 +142,15 @@
 
     #content
     {
+        margin-top: -20px;
         position: relative;
+    }
+
+    .label
+    {
+        display: inline-block;
+        font-size: 15px;
+        margin-bottom: 5px;
     }
 
     .input
