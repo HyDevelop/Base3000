@@ -10,18 +10,18 @@
     "dependencies": {
         "big-integer": "^1.6.48",
         "core-js": "^3.6.5",
-        "element-ui": "^2.13.0",
-        "vue": "^2.6.11",
-        "vue-class-component": "^7.2.3",
-        "vue-property-decorator": "^8.4.1"
+        "element-ui": "^2.13.2",
+        "vue": "^2.6.12",
+        "vue-class-component": "^7.2.5",
+        "vue-property-decorator": "^8.5.1"
     },
     "devDependencies": {
-        "@vue/cli-plugin-babel": "^4.3.1",
-        "@vue/cli-plugin-typescript": "^4.3.1",
-        "@vue/cli-service": "^4.3.1",
-        "sass": "^1.26.3",
+        "@vue/cli-plugin-babel": "^4.5.4",
+        "@vue/cli-plugin-typescript": "^4.5.4",
+        "@vue/cli-service": "^4.5.4",
+        "sass": "^1.26.10",
         "sass-loader": "^8.0.2",
         "typescript": "~3.8.3",
-        "vue-template-compiler": "^2.6.11"
+        "vue-template-compiler": "^2.6.12"
     }
 }
